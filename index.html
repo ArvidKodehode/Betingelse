@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betingelser i JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background-color: #eee;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Betingelser i JavaScript</h1>
+    <p>Her er en oversikt over ulike typer betingelser i JavaScript og hvordan de brukes.</p>
+
+    <h2>1. Hvilke betingelser har vi?</h2>
+    <ul>
+        <li><b>if / else if / else:</b> For å sjekke én eller flere betingelser.</li>
+        <li><b>switch:</b> For å håndtere flere mulige verdier for en variabel.</li>
+        <li><b>Ternary operator:</b> En kort måte å skrive en if-else.</li>
+        <li><b>Logical operators:</b> Kombinerer betingelser med <code>&&</code>, <code>||</code>, og <code>!</code>.</li>
+        <li><b>Short-circuit evaluation:</b> Sjekker sannhetsverdier raskt med <code>x && y</code> eller <code>x || y</code>.</li>
+    </ul>
+
+    <h2>2. Når ville du brukt en IF-statement?</h2>
+    <p>En <code>if</code>-statement brukes når du trenger å evaluere komplekse eller flere betingelser.</p>
+    <pre>
+let temperatur = 10;
+if (temperatur < 0) {
+    console.log("Det er iskaldt ute!");
+} else if (temperatur < 15) {
+    console.log("Ta på en jakke.");
+} else {
+    console.log("Det er varmt nok!");
+}
+    </pre>
+
+    <h2>3. Når ville du brukt en switch case?</h2>
+    <p>En <code>switch</code>-case brukes når du vet at variabelen har et fast sett med verdier.</p>
+    <pre>
+let dag = "mandag";
+switch (dag) {
+    case "mandag":
+        console.log("Ny uke, nye muligheter!");
+        break;
+    case "fredag":
+        console.log("Snart helg!");
+        break;
+    case "søndag":
+        console.log("Tid for avslapning.");
+        break;
+    default:
+        console.log("En vanlig dag.");
+}
+    </pre>
+
+    <h2>4. Sjekk om du skal ha støvler på</h2>
+    <p>Dette eksempelet sjekker om det regner eller er vanndammer.</p>
+    <pre>
+let regnerDet = true;
+let vanndammer = true;
+
+if (regnerDet || vanndammer) {
+    console.log("Du bør ta på støvler.");
+} else {
+    console.log("Du trenger ikke støvler i dag.");
+}
+    </pre>
+
+    <h2>5. Hva er ternary?</h2>
+    <p>En <b>ternary operator</b> er en kortere måte å skrive en if-else.</p>
+    <pre>
+let alder = 20;
+let adgang = alder >= 18 ? "Tillatt" : "Ikke tillatt";
+console.log(adgang); // "Tillatt"
+    </pre>
+
+    <h2>6. Hva er nesting?</h2>
+    <p>Nesting betyr at én betingelse er inni en annen. Her er et eksempel:</p>
+    <pre>
+let vær = "regn";
+let temperatur = 5;
+
+if (vær === "regn") {
+    if (temperatur < 10) {
+        console.log("Ta på støvler og en varm jakke.");
+    } else {
+        console.log("Ta på støvler.");
+    }
+} else {
+    console.log("Ingen støvler nødvendig.");
+}
+    </pre>
+</body>
+</html>
